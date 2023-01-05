@@ -1,0 +1,35 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+}
+.parallax-text{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25vw;
+    font-style: italic;
+}
+.parallax-text::after{
+    content: attr(text);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.15vw black;
+}
+img{
+    width: 50vw;
+    animation: sneakerAnimation
+    2s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;   
+}
+@keyframes sneakerAnimation{
+    0%, 10%{
+        transform: translate(100vw, 0) rotate(15deg);
+    }
+   
+}
